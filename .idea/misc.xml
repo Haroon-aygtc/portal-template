@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="d539471d-00d3-4110-a1ab-cceda0e9f715" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="TypeScriptCompiler">
+    <option name="nodeInterpreterTextField" value="node" />
+    <option name="recompileOnChanges" value="true" />
+    <option name="typeScriptServiceDirectory" value="$USER_HOME$/AppData/Roaming/npm/node_modules/typescript" />
+    <option name="useTypesFromServer" value="true" />
+    <option name="versionType" value="SERVICE_DIRECTORY" />
+  </component>
+</project>

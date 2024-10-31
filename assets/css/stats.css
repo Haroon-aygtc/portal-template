@@ -1,0 +1,164 @@
+/* Stats Section Styles */
+.stats {
+    background: linear-gradient(135deg, var(--black) 0%, var(--gray) 100%);
+    color: white;
+    padding: 100px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.stat-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 195, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--dark-yellow);
+}
+
+.stat-item h3 {
+    color: var(--dark-yellow);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white);
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Animation for stats */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.stat-item {
+    animation: countUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.stat-item:nth-child(1) { animation-delay: 0.1s; }
+.stat-item:nth-child(2) { animation-delay: 0.3s; }
+.stat-item:nth-child(3) { animation-delay: 0.5s; }
+.stat-item:nth-child(4) { animation-delay: 0.7s; }
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .stats-grid {
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .stat-item h3 {
+        font-size: 3rem;
+    }
+
+    .stat-item p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .stat-item {
+        padding: 30px;
+    }
+
+    .stat-item h3 {
+        font-size: 2.8rem;
+    }
+
+    .stat-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .stats {
+        padding: 60px 0;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .stat-item {
+        padding: 25px;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .stat-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Touch device optimization */
+@media (hover: none) {
+    .stat-item:hover {
+        transform: none;
+    }
+}
+
+/* High-resolution screens */
+@media (min-width: 1600px) {
+    .stats-grid {
+        max-width: 1400px;
+    }
+
+    .stat-item h3 {
+        font-size: 4rem;
+    }
+
+    .stat-item p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Optional: Loading animation for numbers */
+@keyframes numberAnimation {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.stat-item.animate h3 {
+    animation: numberAnimation 0.5s ease-out forwards;
+}

@@ -1,0 +1,129 @@
+/* Branches Section Styles */
+.branches {
+    background-color: #ffffff;
+    padding: 100px 0;
+    background-image: linear-gradient(rgba(248, 248, 248, 0.5) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(248, 248, 248, 0.5) 1px, transparent 1px);
+    background-size: 20px 20px;
+    box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.03);
+}
+
+.branches h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.branch-card {
+    background-color: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 195, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.branch-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: var(--dark-yellow);
+}
+
+.branch-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.branch-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.branch-card:hover .branch-image img {
+    transform: scale(1.1);
+}
+
+.branch-card h3 {
+    color: var(--black);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 20px 25px 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.branch-card p {
+    color: var(--gray);
+    font-size: 1rem;
+    margin: 0 25px 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+}
+
+.branch-button {
+    display: block;
+    background-color: var(--dark-yellow);
+    color: var(--black);
+    text-align: center;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    margin: 0 25px 25px;
+    border-radius: 8px;
+}
+
+.branch-button:hover {
+    background-color: var(--black);
+    color: var(--dark-yellow);
+    transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .branches-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .branches h2 {
+        font-size: 2rem;
+    }
+    
+    .branch-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .branch-card p {
+        font-size: 0.9rem;
+    }
+    
+    .branch-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (hover: none) {
+    .branch-card:hover {
+        transform: none;
+    }
+    
+    .branch-card:hover .branch-image img {
+        transform: none;
+    }
+}
