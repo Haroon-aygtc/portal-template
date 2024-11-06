@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>Your Website Title</title>
+
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Your main CSS file -->
+    <!-- External JavaScript libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JavaScript files -->
+    <script src="assets/js/main.js" defer></script>
+    <!-- <script src="js/counter.js" defer></script> -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="https://portal.yalayis.com/customerFeedback/build/static/media/New%20Project%20(2).e5943cad7b8d8a475bb7.png"
+                 alt="AYGTC Logo" style="height: 80px; width: auto;">
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="services.html">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="departments.html">Departments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center">
+                <div class="dropdown">
+                    <button class="btn bg-yellow-500" type="button" id="languageDropdown" data-bs-toggle="dropdown">
+                        <i class="fas fa-globe me-2"></i> Language
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">English</a></li>
+                        <li><a class="dropdown-item" href="#">Arabic</a></li>
+                    </ul>
+                </div>
+                <button class="btn bg-yellow-500">
+                    <i class="fas fa-user"></i>
+                    <span>Login</span>
+                </button>
+                <button class="btn bg-yellow-500">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Register</span>
+                </button>
+                <button class="dark-mode-toggle btn" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</nav>
+
+<section class="hero d-flex align-items-center section-padding">
+    <div class="container">
+        <div class="hero-content">
+            <h1>
+                <span class="animate-title text-gold" style=" font-weight: 800; font-size: 4rem; display: block;">Al Yalayis</span>
+                <span class="animate-subtitle"
+                      style="font-size: 3.2rem; display: block;">Government Transaction Center</span>
+            </h1>
+            <p class="lead">
+                Experience seamless government services with modern,<br>
+                efficient, and secure solutions tailored for you.
+            </p>
+            <button class="btn bg-yellow-500 btn-lg">
+                <span class="me-2">Get Started Now</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="analytics section-padding" style="background: var(--bg-color);">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row analytics-wrapper"
+                     style="background: var(--card-bg); border-radius: 15px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.03);">
+                    <div class="col-md-3 text-center mb-4 mb-md-0">
+                        <div class="counter-item">
+                            <h3 class="counter-number mb-2"
+                                style="font-size: 2.5rem; font-weight: 700; color: #D39931;">
+                                <span class="counter text-gold">15</span>K+
+                            </h3>
+                            <p style="color: var(--muted-text); font-size: 1rem; margin: 0;">Happy Customers</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center mb-4 mb-md-0">
+                        <div class="counter-item">
+                            <h3 class="counter-number mb-2"
+                                style="font-size: 2.5rem; font-weight: 700; color: #D39931;">
+                                <span class="counter text-gold">50</span>+
+                            </h3>
+                            <p style="color: var(--muted-text); font-size: 1rem; margin: 0;">Services Offered</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center mb-4 mb-md-0">
+                        <div class="counter-item">
+                            <h3 class="counter-number mb-2"
+                                style="font-size: 2.5rem; font-weight: 700; color: #D39931;">
+                                <span class="counter text-gold">3</span>
+                            </h3>
+                            <p style="color: var(--muted-text); font-size: 1rem; margin: 0;">Branch Locations</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <div class="counter-item">
+                            <h3 class="counter-number mb-2"
+                                style="font-size: 2.5rem; font-weight: 700; color: #D39931;">
+                                <span class="counter text-gold">98</span>%
+                            </h3>
+                            <p style="color: var(--muted-text); font-size: 1rem; margin: 0;">Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="why-choose-us ">
+    <div class="container">
+        <div class="row align-items-center" >
+            <div class="col-md-6">
+                <h2 class="mb-4">
+                    <span style="color: var(--text-color);">Why Choose </span>
+                    <span class="text-yellow-500 text-gold footer-heading" style="font-weight: 600; font-size: 1.1em;">Al Yalayis</span>
+                </h2>
+                <p class="lead mb-4">Discover the unique advantages that make Al Yalayis your trusted government service
+                    partner.</p>
+                <div class="mb-5"></div>
+                <div class="why-choose-us-cards" style="min-height: 400px;">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-award text-yellow-500 mb-3" style="font-size: 2.5rem;"></i>
+                            <h5>Excellence in Service</h5>
+                            <p class="mb-0">Best-in-class government services</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-clock text-yellow-500 mb-3" style="font-size: 2.5rem;"></i>
+                            <h5>Quick Processing</h5>
+                            <p class="mb-0">Fast and efficient service delivery</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-shield-alt text-yellow-500 mb-3" style="font-size: 2.5rem;"></i>
+                            <h5>Secure &amp; Reliable</h5>
+                            <p class="mb-0">Your data is safe with us</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-users text-yellow-500 mb-3" style="font-size: 2.5rem;"></i>
+                            <h5>Customer First</h5>
+                            <p class="mb-0">Focus on customer satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="why-choose-us-details">
+                    <div class="stats mb-5" style="top: 120px;">
+                        <div class="stat-item">
+                            <h4>99%</h4>
+                            <p>Customer Satisfaction</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>24/7</h4>
+                            <p>Support Available</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>95%</h4>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+
+                    <ul class="list-unstyled" style="position: relative; top: 70px;">
+                        <li><i class="fas fa-check text-yellow-500"></i> <span>Streamlined government procedures</span>
+                        </li>
+                        <li><i class="fas fa-check text-yellow-500"></i> <span>Expert staff at your service</span></li>
+                        <li><i class="fas fa-check text-yellow-500"></i> <span>Modern digital solutions</span></li>
+                        <li><i class="fas fa-check text-yellow-500"></i> <span>Digital transformation leader</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="branches section-padding">
+    <div class="container">
+        <div class="row align-items-center" >
+            <div class="text-start mb-5" >
+                <h2>Our <span class="text-yellow-500 footer-heading" style="font-weight: 600; font-size: 1.1em;">Branches</span></h2>
+                <p class="lead">Serving you across Dubai with strategic locations</p>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Head Office -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/images/branch/1.jpg" alt="Head Office" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Head Office</h5>
+                            <p class="card-text">
+                                Dubai Investment Park 2,<br>
+                                Dubai
+                            </p>
+                            <button class="btn btn-visit">Visit Branch</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Al Kifaf Center -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/images/branch/kifaf.jpg" alt="Kifaf Center" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Kifaf Center</h5>
+                            <p class="card-text">
+                                Bar Dubai,<br>
+                                Dubai
+                            </p>
+                            <button class="btn btn-visit">Visit Branch</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Al Khaleej Center -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="assets/images/branch/2.jpg" alt="Al Khaleej Center" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Al Khaleej Center</h5>
+                            <p class="card-text">
+                                Jabal Ali,<br>
+                                Dubai
+                            </p>
+                            <button class="btn btn-visit">Visit Branch</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section-padding service-cards">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="text-start mb-5" >
+                <h2>Our <span class="text-yellow-500 footer-heading" style="font-weight: 600; font-size: 1.1em;">Services</span></h2>
+            </div>
+            <div class="col-md-7">
+                <div class="service-scroll-container">
+                    <div class="service-grid">
+                        <div class="service-card diagonal-card">
+                            <div class="service-icon">
+                                <img src="assets/images/services/Al-Adheed3.png" alt="Identity Services">
+                            </div>
+                            <div class="service-content">
+                                <h5>Identity Services</h5>
+                                <p>Comprehensive personal identification solutions</p>
+                                <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="service-card diagonal-card">
+                            <div class="service-icon">
+                                <img src="assets/images/services/Dubai-Courts1.png.png" alt="Document Services">
+                            </div>
+                            <div class="service-content">
+                                <h5>Document Services</h5>
+                                <p>Efficient document processing and verification</p>
+                                <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="service-card diagonal-card">
+                            <div class="service-icon">
+                                <img src="assets/images/services/Dubai-Courts2.png.png" alt="Payment Services">
+                            </div>
+                            <div class="service-content">
+                                <h5>Payment Services</h5>
+                                <p>Secure and convenient payment solutions</p>
+                                <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="service-card diagonal-card">
+                            <div class="service-icon">
+                                <img src="assets/images/services/Dubai-Courts2.png.png" alt="Business Services">
+                            </div>
+                            <div class="service-content">
+                                <h5>Business Services</h5>
+                                <p>Comprehensive business support and licensing</p>
+                                <a href="#" class="btn-service">Learn More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5">
+                <div class="service-description ps-4">
+                    <h2 class="mb-4">
+                        <span style="color: var(--text-color);">Explore our Essential </span>
+                        <span class="text-yellow-500 footer-heading" style="font-weight: 600; font-size: 1.1em;">Services</span>
+                    </h2>
+                    <p class="lead mb-4">At Al Yalayis, we offer a comprehensive range of government services designed to simplify your interactions with various departments.</p>
+                    <p>Our digital platform brings together multiple government services under one roof, ensuring a seamless, efficient, and user-friendly experience for citizens and businesses alike.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-2"><i class="fas fa-check text-yellow-500 me-2"></i>Centralized Service Hub</li>
+                        <li class="mb-2"><i class="fas fa-check text-yellow-500 me-2"></i>Digital-First Approach</li>
+                        <li class="mb-2"><i class="fas fa-check text-yellow-500 me-2"></i>Secure and Transparent</li>
+                        <li class="mb-2"><i class="fas fa-check text-yellow-500 me-2"></i>24/7 Accessibility</li>
+                    </ul>
+                </div>
+            </div>
+        </div></div>
+</section>
+
+<section class="departments section-padding ">
+    <div class="container">
+        <div class="text-start mb-5">
+            <h2>
+                <span style="color: var(--text-color);">Our </span>
+                <span class="text-yellow-500 footer-heading" style="font-weight: 600; font-size: 1.1em;">Departments</span>
+            </h2>
+            <p class="lead">Specialized departments working together to serve you better</p>
+        </div>
+        <div class="department-grid">
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/court-removebg-preview.png.png.png" alt="Dubai Courts Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Dubai Courts</h5>
+                    <p>Legal services, case management, and judicial documentation</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/economy-removebg-preview.png.png.png" alt="Economic Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Economic Services</h5>
+                    <p>Business licensing, trade permits, and economic documentation</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/dubai_authority-removebg-preview.png.png.png" alt="Immigration Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Immigration Services</h5>
+                    <p>Visa services, residency, and immigration procedures</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/7.png.png.png" alt="Federal Tax Authority Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Federal Tax Authority</h5>
+                    <p>Tax registration, returns, and compliance services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/isurance-removebg-preview.png.png.png" alt="Insurance Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Insurance Services</h5>
+                    <p>Comprehensive insurance and risk management solutions</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/mohre.png.png.png" alt="MOHRE Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>MOHRE Services</h5>
+                    <p>Labor and employment-related services and support</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/rta-removebg-preview.png.png.png" alt="RTA Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>RTA Services</h5>
+                    <p>Transportation and road authority services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/a2ac0b37-f5a9-4173-8d9b-5f56327ca154-t-removebg-preview (3).png.png.png" alt="Tadbeer Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Tadbeer Services</h5>
+                    <p>Domestic worker and labor recruitment services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/amar (1).png.png.png" alt="Amer Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Amer Services</h5>
+                    <p>Government services and customer happiness center</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/new_tasheel-removebg-preview (1).png.png.png" alt="Tasheel Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Tasheel Services</h5>
+                    <p>Simplified government and business process services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/new_tasheel-removebg-preview (1).png.png.png" alt="Taw-Jeeh Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Taw-Jeeh Services</h5>
+                    <p>Career guidance and professional development services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/tr (2).png.png.png" alt="Translation Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Translation Services</h5>
+                    <p>Professional document translation and verification</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/Dubai-Health-Authority-removebg-preview.png.png.png" alt="Dubai Health Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Dubai Health Services</h5>
+                    <p>Healthcare services and medical support</p>
+                    <a href="#" class="btn-service"> Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/g7 (3).png.png.png" alt="Al Yalayis Typing Center Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Al Yalayis Typing Center</h5>
+                    <p>Professional typing and documentation services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/logo_sm.png.png.png" alt="Al-Adheed Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Al-Adheed Services</h5>
+                    <p>Comprehensive support and administrative services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/vipservices.png.png.png" alt="VIP Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>VIP Services</h5>
+                    <p>Exclusive and personalized government services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/7.png.png.png" alt="ICP Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>ICP Services</h5>
+                    <p>Identity and citizenship process services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/dubailand.png.png.png" alt="Land Department Services Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Land Department Services</h5>
+                    <p>Real estate and property-related services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/download.png.png.png" alt="Dubai Driving Center Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Dubai Driving Center</h5>
+                    <p>Driver licensing and vehicle-related services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="department-card diagonal-card">
+                <div class="department-icon">
+                    <img src="assets/images/department_logo/download (2).png.png.png" alt="Eye Care Optics Icon">
+                </div>
+                <div class="service-content">
+                    <h5>Eye Care Optics</h5>
+                    <p>Vision care and optical services</p>
+                    <a href="#" class="btn-service">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer mt-15">
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- Company Info Section -->
+            <div class="col-lg-3 footer-column">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4695-qAGOseOIQdVIcLpAfNPylTxpbaU5vs.png"
+                     alt="Al Yalavis Logo"
+                     class="brand-logo">
+                <p class="company-description">
+                    Al Yalavis is a leading government transactions center, dedicated to simplifying administrative
+                    processes
+                    and providing efficient solutions for both citizens and businesses.
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 footer-column">
+                <h4 class="footer-heading text-gold">Explore</h4>
+                <a href="#" class="quick-link">Home</a>
+                <a href="#" class="quick-link">About Us</a>
+                <a href="#" class="quick-link">Services</a>
+                <a href="#" class="quick-link">Departments</a>
+                <a href="#" class="quick-link">Contact Us</a>
+                <a href="#" class="quick-link">FAQs</a>
+            </div>
+
+            <!-- Popular Services -->
+            <div class="col-lg-2 footer-column">
+                <h4 class="footer-heading text-gold">Popular Services</h4>
+                <a href="#" class="quick-link">Identity Services</a>
+                <a href="#" class="quick-link">Document Services</a>
+                <a href="#" class="quick-link">Payment Services</a>
+                <a href="#" class="quick-link">Business Services</a>
+                <a href="#" class="quick-link">Feedback</a>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 footer-column">
+                <h4 class="footer-heading text-gold">Contact</h4>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        123 Business District, Dubai
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        Phone: (971) 456-7890
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        Email: info@alyalavis.com
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscribe and App Section -->
+        <div class="row mt-5 subscribe-app-section">
+            <div class="col-lg-6">
+                <h4 class="footer-heading text-gold mb-3">Stay Updated</h4>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email">
+                    <button type="submit" class="newsletter-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <h4 class="footer-heading text-gold mb-3">Download Our App</h4>
+                <div class="app-section">
+                    <a href="#" class="app-button"><i class="fab fa-apple"></i>iOS App</a>
+                    <a href="#" class="app-button"><i class="fab fa-android"></i>Android App</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="row footer-bottom">
+            <div class="col-md-6 text-center text-md-start">
+                &copy; 2024 Al Yalavis. All rights reserved.
+            </div>
+            <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                <a href="#" class="quick-link d-inline-block me-3">Privacy Policy</a>
+                <a href="#" class="quick-link d-inline-block">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    // JavaScript for theme toggle and counters
+</script>
+</body>
+</html>

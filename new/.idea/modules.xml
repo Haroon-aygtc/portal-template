@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/portal-template.iml" filepath="$PROJECT_DIR$/.idea/portal-template.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/customerPortal-template.iml" filepath="$PROJECT_DIR$/.idea/customerPortal-template.iml" />
     </modules>
   </component>
 </project>

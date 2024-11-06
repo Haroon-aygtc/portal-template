@@ -1,0 +1,80 @@
+
+
+            .branches {
+                padding-top: 100px;
+                display: flex;
+                align-items: center;
+                background-color: var(--bg-color);
+            }
+
+
+            .branches .row {
+                margin: 0 -15px;
+            }
+
+            .branches .card {
+                background: var(--card-bg);
+                color: var(--text-color);
+                transition: all 0.3s ease;
+                height: 100%;
+                min-height: 350px;
+            }
+
+            .branches .card img {
+                height: 200px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .branches .text-start.mb-5 {
+                margin-bottom: 2rem !important;
+            }
+
+            .branches .card {
+                background: var(--card-bg);
+                color: var(--text-color);
+                display: flex;
+                align-items: center;
+                transition: all 0.3s ease;
+                height: 100%;
+                min-height: 380px;
+            }
+
+            .branches h2,
+            .branches .lead {
+                color: var(--text-color);
+            }
+
+            .branches .card-title {
+                color: var(--text-color) !important;
+            }
+
+            .branches .card-text,
+            .branches .text-muted {
+                color: var(--muted-text) !important;
+            }
+
+            .btn-visit {
+                background-color: var(--primary-color);
+                color: white;
+                border: none;
+                padding: 8px 15px;
+                border-radius: 6px;
+                transition: all 0.3s ease;
+            }
+
+            .btn-visit:hover {
+                background-color: #b37a27;
+                transform: translateY(-2px);
+            }
+
+            [data-theme="dark"] .btn-visit {
+                background-color: var(--primary-color);
+                color: black;
+                border: 1px solid var(--primary-color);
+            }
+
+            [data-theme="dark"] .btn-visit:hover {
+                background-color: var(--primary-color);
+                color: black;
+            }

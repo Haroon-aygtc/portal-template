@@ -1,0 +1,280 @@
+/* Custom styles to override or extend Bootstrap */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #ffffff;
+    --section-bg: #f9f9f9;
+    --card-text: #333333;
+    --muted-text: #666666;
+    --header-bg: #333333;
+    --primary-color: #D39931;
+}
+
+
+/* Add this section to define dark theme variables */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --header-bg: #1e1e1e;
+    --primary-color: #e4b852;
+    --card-bg: #1e1e1e;
+    --section-bg: #1a1a1a;
+    --card-text: #ffffff;
+    --muted-text: #cccccc;
+    --service-card-bg: #1e1e1e;
+}
+
+.text-yellow-500 {
+    color: #D39931;
+}
+
+
+
+/* Theme Colors */
+.bg-yellow-500 {
+    background: #D39931;
+    color: white;
+}
+
+
+
+.bg-yellow-500:hover {
+    background: linear-gradient(135deg, #b88329, #d39931);
+    color: white;
+}
+.text-yellow-500 {
+    color: #D39931;
+}
+.hover-yellow:hover {
+    color: #e4b852 !important;
+    transform: translateY(-2px);
+}
+.btn-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;  /* Fixed width */
+    height: 42px;  /* Fixed height */
+    padding: 10px 15px;
+    margin: 0 10px;  /* Consistent margin */
+    border-radius: 8px;  /* Consistent border radius */
+    font-size: 14px;  /* Consistent font size */
+    transition: all 0.3s ease;
+}
+
+
+.branches, .departments, .service-cards, .testimonials {
+    padding: 80px 0;
+    background-color: var(--bg-color); /* Updated for dark mode */
+}
+
+
+@media (max-width: 991px) {
+    .navbar-brand {
+        margin-right: auto;
+    }
+    .navbar .btn {
+        margin: 0.5rem 0;
+    }
+    .hero h1 span:first-child {
+        font-size: 3.5rem;
+    }
+    .hero h1 span:last-child {
+        font-size: 2.8rem;
+    }
+}
+@media (max-width: 576px) {
+    .hero h1 span:first-child {
+        font-size: 3rem;
+    }
+    .hero h1 span:last-child {
+        font-size: 2.4rem;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .hero h1 span:first-child {
+        font-size: 3.5rem;
+    }
+    .hero h1 span:last-child {
+        font-size: 2.8rem;
+    }
+}
+@media (max-width: 576px) {
+    .hero h1 span:first-child {
+        font-size: 3rem;
+    }
+    .hero h1 span:last-child {
+        font-size: 2.4rem;
+    }
+}
+
+
+
+
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes zoomFadeIn {
+    0% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.animate-title {
+    animation: zoomFadeIn 1s ease forwards;
+}
+.animate-subtitle {
+    animation: slideInRight 1s ease 0.3s forwards;
+    opacity: 0;
+}
+
+
+[data-theme="dark"] .section-divider-wave {
+    background: var(--section-bg); /* Uses the dark theme section background */
+}
+
+
+@media (max-width: 768px) {
+    .counter-item::after {
+        display: none;
+    }
+}
+
+
+.service-cards {
+    background-color: var(--bg-color);  /* Ensure consistent background */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.diagonal-card {
+    background-color: transparent;  /* Remove background */
+    /* Subtle border */
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.diagonal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-bottom: 3px solid var(--primary-color);  /* Only show border on hover */
+}
+
+.service-icon {
+    flex: 0 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.service-icon img {
+    max-width: 140px;
+    max-height: 130px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.diagonal-card:hover .service-icon img {
+    transform: scale(1.1);
+}
+
+.service-content {
+    flex: 1;
+}
+
+.service-content h5 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.service-content p {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.btn-service {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.btn-service i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-service:hover {
+    color: var(--primary-color);
+}
+
+.btn-service:hover i {
+    transform: translateX(5px);
+}
+
+[data-theme="dark"] .diagonal-card:hover {
+    background-color: #252525 !important;  /* Slightly lighter than base dark color */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+/* Ensure text colors stay visible in dark mode */
+[data-theme="dark"] .diagonal-card h5,
+[data-theme="dark"] .diagonal-card p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .btn-service {
+    color: var(--primary-color);
+}
+
+/* Common section padding */
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .section-padding {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+

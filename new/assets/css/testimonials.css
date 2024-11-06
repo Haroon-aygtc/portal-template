@@ -1,0 +1,23 @@
+.testimonials {
+    background-color: #f9f9f9; /* Light background for the testimonials section */
+}
+
+.testimonial-card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-avatar {
+    color: #D39931; /* Color for the avatar icon */
+}
+
+.card-text {
+    font-size: 1rem;
+    color: var(--text-color);
+}

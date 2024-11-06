@@ -1,0 +1,47 @@
+/* Import other CSS files if needed */
+@import 'style.css';
+@import 'header.css';
+@import 'hero.css';
+@import 'analytics.css';
+@import 'why-choose-us.css';
+@import 'branches.css';
+@import 'service-cards.css';
+@import 'departments.css';
+@import 'testimonials.css';
+@import 'footer.css';
+
+/* Custom styles to override or extend Bootstrap */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: transparent;
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --card-bg: #ffffff;
+    --section-bg: #f9f9f9;
+    --card-text: #333333;
+    --muted-text: #666666;
+    --header-bg: #333333;
+    --primary-color: #D39931;
+}
+
+
+/* Add this section to define dark theme variables */
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #ffffff;
+    --header-bg: #1e1e1e;
+    --primary-color: #e4b852;
+    --card-bg: #1e1e1e;
+    --section-bg: #1a1a1a;
+    --card-text: #ffffff;
+    --muted-text: #cccccc;
+}
+
+.text-yellow-500 {
+    color: #e4b852;
+}
